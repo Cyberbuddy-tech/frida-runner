@@ -137,11 +137,7 @@ function setProp(){
     FINGERPRINT.setAccessible(true)
     FINGERPRINT.set(null,"google/crosshatch/crosshatch:10/QQ3A.200805.001/6578210:user/release-keys")
 
-    // Build.deriveFingerprint.inplementation = function(){
-    //     var ret = this.deriveFingerprint() //该函数无法通过反射调用
-    //     console.log(ret)
-    //     return ret
-    // }
+  
 
     var system_property_get = Module.findExportByName("libc.so", "__system_property_get")
     Interceptor.attach(system_property_get,{
